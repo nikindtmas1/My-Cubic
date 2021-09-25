@@ -9,6 +9,10 @@ router.get('/create', (req, res) => {
     res.render('create', {layout: false});
 });
 
+router.get('/details/:id', (req, res) => {
+    res.render('details', {layout: false});
+});
+
 router.get('*', (req, res) => {
     res.render('404', {layout: false});
 });
