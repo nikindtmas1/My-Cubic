@@ -9,9 +9,14 @@ router.get('/create', (req, res) => {
     res.render('create');
 });
 
+router.post('/create', (req, res) => {
+    console.log(req.body);
+});
+
 router.get('/details/:id', (req, res) => {
     res.render('details');
 });
+
 
 router.get('*', (req, res) => {
     res.render('404');
