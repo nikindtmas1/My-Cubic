@@ -15,5 +15,5 @@ module.exports = (app) => {
     //TODO: Setup the body parser
 
     //TODO: Setup the static files
-    app.use(express.static(path.resolve(__dirname, './static')));
+    app.use(express.static('static'));
 };
