@@ -1,5 +1,6 @@
 class Cube {
-    constructor(name, description, imageUrl, difficulty){
+    constructor(cubeId, name, description, imageUrl, difficulty){
+        this.cubeId = cubeId,
         this.name = name,
         this.description = description,
         this.imageUrl = imageUrl,
