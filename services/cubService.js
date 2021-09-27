@@ -9,7 +9,14 @@ function getAll(){
     let result = dbCub;
     return result;
 
-}
+};
+
+function getOne(cubeId){
+
+    let result = dbCub.find((x) => x.cubeId === cubeId);
+
+    return result;
+};
 
 function create(data){
     console.log(dbCub);
@@ -35,6 +42,7 @@ function create(data){
 
 const cubeService = {
     getAll,
+    getOne,
     create
 }
 
