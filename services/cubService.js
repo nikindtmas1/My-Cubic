@@ -6,6 +6,8 @@ const uniqid = require('uniqid');
 
 function getAll(){
 
+    let result = dbCub;
+    return result;
 
 }
 
