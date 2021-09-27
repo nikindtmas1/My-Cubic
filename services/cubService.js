@@ -4,6 +4,11 @@ const fs = require('fs');
 const path = require('path');
 const uniqid = require('uniqid');
 
+function getAll(){
+
+
+}
+
 function create(data){
     console.log(dbCub);
     let cube = new Cube(
@@ -27,6 +32,7 @@ function create(data){
 };
 
 const cubeService = {
+    getAll,
     create
 }
 
