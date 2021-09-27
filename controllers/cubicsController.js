@@ -11,7 +11,7 @@ router.get('/create', (req, res) => {
     res.render('create');
 });
 
-router.post('/create', (req, res) => {
+router.post('/create', validateData, (req, res) => {
     let currentCube = JSON.stringify(req.body, null, 2);
     console.log(currentCube);
 
@@ -29,4 +29,19 @@ router.get('/details/:id', (req, res) => {
 router.get('*', (req, res) => {
     res.render('404');
 });
+
+function validateData(req, res, next){
+    let isValid = true;
+
+    if( req.body.name.trim().length < 2 ){
+        isValid = false;
+    }else if(!req.body.imageUrl){
+        isValid = false;
+    }
+
+    if(isValid){
+        next();
+    }
+}
+
 module.exports = router;
