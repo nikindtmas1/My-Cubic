@@ -14,8 +14,8 @@ router.post('/create', (req, res) => {
     let currentCube = JSON.stringify(req.body, null, 2);
     console.log(currentCube);
 
-    let {name, description, imageUrl, difficulty} = req.body;
-    cubeService.create(name, description, imageUrl, difficulty);
+    let data = req.body;
+    cubeService.create(data);
     
     res.redirect('/');
 });
