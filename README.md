@@ -1,6 +1,6 @@
 # My-Cubic
 Student Project
-Multiplay application
+Multi Page Application
 
 ## 👨 Author
 
