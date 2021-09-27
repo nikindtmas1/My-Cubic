@@ -3,7 +3,8 @@ const router = express.Router();
 const cubeService = require('../services/cubService');
 
 router.get('/', (req, res) => {
-    res.render('index');
+    let cubics = cubeService.getAll();
+    res.render('index', {title: 'Brows', cubics});
 });
 
 router.get('/create', (req, res) => {
