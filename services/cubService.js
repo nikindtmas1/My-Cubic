@@ -7,7 +7,7 @@ const uniqid = require('uniqid');
 function create(data){
     console.log(dbCub);
     let cube = new Cube(
-      
+        uniqid(),
         data.name,
         data.description,
         data.imageUrl,
