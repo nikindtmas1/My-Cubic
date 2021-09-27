@@ -21,8 +21,10 @@ router.post('/create', validateData, (req, res) => {
     res.redirect('/');
 });
 
-router.get('/details/:id', (req, res) => {
-    res.render('details');
+router.get('/details/:cubeId', (req, res) => {
+
+    let cube = cubeService.getOne(req.params.cubeId)
+    res.render('details', {title: 'Details', cube});
 });
 
 
