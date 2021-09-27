@@ -4,9 +4,22 @@ const fs = require('fs');
 const path = require('path');
 const uniqid = require('uniqid');
 
-function getAll(){
+function getAll(query){
 
     let result = dbCub;
+
+    if(query.search){
+        result = result.filter((x) => x.name.toLowerCase().includes(query.search));
+    }
+
+    if(query.from){
+        result = result.filter((x) => Number(x.difficulty) >= query.from);
+    }
+
+    if(query.to){
+        result = result.filter((x) => Number(x.difficulty) <= query.to);
+    }
+
     return result;
 
 };
